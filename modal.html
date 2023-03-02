@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>modal page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: 'red',
+              }
+            }
+          }
+        }
+      </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+</head>
+
+
+<body>
+    <h2 class="text-center font-bold my-5 text-2xl">This is modal</h2>
+    <div class="modal max-w-[35rem] mx-auto border border-gray shadow-md overflow-y-scroll h-[100vh]">
+        <!-- ............top............ -->
+
+        <div class="flex justify-between px-3 py-1 bg-blue-500 text-gray-200">
+            <button class=""><i class="fa-solid fa-arrows-up-down-left-right"></i></button>
+            <h2 class="text-sm font-semibold">Due on <span class="text-sm font-semibold">02/20/2023</span></h2>
+            <button><i class="fa fa-xmark"></i></button>
+        </div>
+
+        <!-- ............generator............ -->
+        <div class="flex items-center justify-between px-6 my-4 border-b pb-4  border-gray-200">
+            <div class="flex items-center space-x-1">
+                <button class="text-sm text-blue-500"><i class="fa-solid fa-rotate"></i></button>
+                <h2 class="font-bold">Generator Maintenance</h2>
+            </div>
+            <div class="flex justify-between space-x-2 items-center">  
+                <div class="flex items-center border border-blue-400 py-1 px-2 space-x-1 rounded-[0.2rem]">
+                    <button class="text-sm text-blue-400"><i class="fa fa-comment"></i></button>
+                    <h2 class="text-[12px] font-bold text-blue-400">Comments</h2>
+                </div>
+                <div class="flex items-center border border-blue-400 py-1 px-2 space-x-1 rounded-[0.2rem]">
+                    <button class="text-sm text-blue-400"><i class="fa-solid fa-pen"></i></button>
+                    <h2 class="text-[12px] font-bold text-blue-400">To Edit</h2>
+                </div>
+                <div class="btn">
+                   <button class="text-blue-500"> <i class="fa fa-ellipsis-vertical"></i></button>
+                </div>
+            </div>
+        </div>
+
+          <!-- ............status section............ -->
+          <div class="mt-5 mb-1 mx-6 ">
+            <h2 class="text-[15px] font-semibold text-gray-700 ">Status <span class="text-gray-500 text-sm font-normal">(click to update)</span></h2>
+          </div>
+          <div class="flex items-center justify-between mx-6">
+            <div class="flex items-center space-x-2">
+                <div class="box flex flex-col px-6 py-1 justify-center items-center rounded-sm bg-blue-500 text-gray-200">
+                    <button><i class="fa fa-lock"></i></button>
+                    <h2 class="text-sm font-bold">Open</h2>
+                </div>
+                <div class="box flex flex-col px-5 py-1 justify-center items-center rounded-sm border border-gray-300 text-blue-500">
+                    <button><i class="fa fa-circle-play"></i></button>
+                    <h2 class="text-[12px] font-bold">On hold</h2>
+                </div>
+                <div class="box flex flex-col px-4 py-1 justify-center items-center rounded-sm border border-gray-300 text-blue-500">
+                    <button><i class="fa fa-rotate-right"></i></button>
+                    <h2 class="text-[12px] font-bold">Progress</h2>
+                </div>
+                <div class="box flex flex-col px-3 py-1 justify-center items-center rounded-sm border border-gray-300 text-blue-500">
+                    <button><i class="fa fa-check"></i></button>
+                    <h2 class="text-[12px] font-bold">Completed</h2>
+                </div>
+              </div>
+              <div class="flex space-x-1">
+                <button class=" text-blue-500"><i class="fa-solid fa-link"></i></button>
+                <h2 class=" text-sm font-semibold text-blue-500">Copy Link</h2>
+              </div>
+          </div>
+
+            <!-- ............due date section............ -->
+            <div class="border-b border-gray-300 mx-6">
+                <div class=" mr-20 flex items-center justify-between mt-10 pb-5 ">
+                    <div class=" space-y-2">
+                        <h2 class="text-sm text-gray-600 font-bold">Due Date</h2>
+                        <h2 class="text-xs text-gray-500">Morning</h2>
+                    </div>
+                    <div class=" space-y-2">
+                        <h2 class="text-sm text-gray-600 font-bold">Priority</h2>
+                        <div class="flex items-center space-x-1">
+                            <div class="w-2 h-2 rounded-full bg-red-600"></div>
+                            <h2 class="text-xs text-gray-500">high</h2>
+                        </div>
+                    </div>
+                    <div class=" space-y-2">
+                        <h2 class="text-sm text-gray-600 font-bold">Work order ID</h2>
+                        <h2 class="text-xs text-gray-500">#3</h2>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ............assign to  section............ -->
+
+            <div class="my-5 mx-5 border-b border-gray-300 pb-5">
+                <h2 class="text-gray-600 font-semibold text-sm">Assign to</h2>
+                <h2 class="text-gray-500 text-xs mt-[6px]">Kadir kacapor</h2>
+            </div>
+            <div class="my-5 mx-5 border-b border-gray-300 pb-5">
+                <h2 class="text-gray-600 font-semibold text-sm">Description</h2>
+                <h2 class="text-gray-500 text-xs mt-[6px]">Inspection</h2>
+            </div>
+            <div class="my-5 mx-5 border-b border-gray-300 pb-5">
+                <h2 class="text-gray-600 font-semibold text-sm">Location</h2>
+                <h2 class="text-gray-500 text-xs mt-[6px]">General</h2>
+            </div>
+           <div class="flex justify-between items-center border-b border-gray-300 pb-5 mx-5">
+            <div class="">
+                <h2 class="text-gray-600 font-semibold text-sm">Catgores</h2>
+                <h2 class="text-gray-500 text-xs mt-[6px]">security</h2>
+            </div>
+            <div class=" ">
+                <h2 class="text-gray-600 font-semibold text-sm">Responsibility</h2>
+                <h2 class="text-gray-500 text-xs mt-[6px]">Repeat every year on 02/23</h2>
+            </div>
+           </div>
+           <div class="mx-5 my-5">
+                <h2 class="text-[13px] text-gray-500 font-semibold">Created by kadir kacapor 02/02/2023 8:29 PM</h2>
+                <h2 class="text-[13px] mt-2 text-gray-500 font-semibold">Last update on 02/02/2023 8:29 PM</h2>
+           </div>
+
+            <!-- ............checklist to  section............ -->
+            <div class="bg-blue-500 px-5 py-4 rounded">
+                <h2 class="text-sm font-bold text-gray-200">Checklist</h2>
+            </div>
+
+              <!-- ............step-1  section............ -->
+              <div class="mx-5 border border-gray-200 rounded px-3 py-1 my-3">
+                <h3 class="text-sm text-gray-500 py-1 font-semibold">Step 1</h3>
+                <div class="flex my-2 space-x-1">
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-sm font-bold text-blue-400 text-center">And</h1>
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-[13px] font-bold text-blue-400 text-center">No</h1>
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-[13px] font-bold text-blue-400 text-center">N/A</h1>
+                </div>
+              </div>
+
+              <!-- ............step-2  section............ -->
+              <div class="mx-5 border border-gray-200 rounded px-3 py-1 my-3">
+                <h2 class="text-sm text-gray-500 font-semibold py-1">Step 2</h2>
+                <div class="flex my-2 space-x-1">
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-sm font-bold text-blue-400 text-center">And</h1>
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-[13px] font-bold text-blue-400 text-center">No</h1>
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-[13px] font-bold text-blue-400 text-center">N/A</h1>
+                </div>
+              </div>
+
+              <!-- ............step-3  section............ -->
+              <div class="mx-5 border border-gray-200 rounded px-3 py-1 my-3">
+                <h2 class="text-sm py-1 text-gray-500 font-semibold">Step 3</h2>
+                <div class="flex my-2 space-x-1">
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-sm font-bold text-blue-400 text-center">And</h1>
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-[13px] font-bold text-blue-400 text-center">No</h1>
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-[13px] font-bold text-blue-400 text-center">N/A</h1>
+                </div>
+              </div>
+
+              <!-- ............step-4  section............ -->
+              <div class="mx-5 border border-gray-200 rounded px-3 py-1 my-3">
+                <h2 class="text-sm py-1 text-gray-500 font-semibold">Step 4</h2>
+                <div class="flex my-2 space-x-1">
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-sm font-bold text-blue-400 text-center">And</h1>
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-[13px] font-bold text-blue-400 text-center">No</h1>
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-[13px] font-bold text-blue-400 text-center">N/A</h1>
+                </div>
+              </div>
+
+              <!-- ............step-5  section............ -->
+              <div class="mx-5 border border-gray-200 rounded px-3 py-1 my-3">
+                <h2 class="text-sm py-1 text-gray-500 font-semibold">Step 5</h2>
+                <div class="flex my-2">
+                    <h1 class="border border-gray-200 py-1 w-full rounded text-xs font-semibold text-gray-500 px-4">insert text</h1>
+                    
+                </div>
+              </div>
+
+              <!-- ............comments  section............ -->
+              <div class=" mx-5 border-y border-gray-200 py-4 mt-9 mb-3">
+                <h2 class="text-gray-800 font-medium">Comments</h2>
+              </div>
+
+              <div class="mx-5 border border-gray-200 px-2 py-2 rounded">
+                <textarea class="w-full text-sm" name="" id="" placeholder="write a comment"></textarea>
+              </div>
+              <div class="flex items-center mx-5 justify-end space-x-2 mt-4 mb-10">
+                <button class="text-sm text-blue-400"><i class="fa fa-link"></i></button>
+                <h2 class="text-xs font-semibold text-gray-500"> From you</h2>
+              </div>
+
+
+    </div>
+    
+</body>
+</html>

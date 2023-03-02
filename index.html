@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Demo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: 'red',
+              }
+            }
+          }
+        }
+      </script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+</head>
+<body>
+
+ <!-- .........................table section..................................-->
+
+  <section class="mt-10">
+
+    <!-- ...........table heading................. -->
+
+    <div class="flex justify-between items-center">
+        <div class="flex space-x-3 items-center">
+            <h2 class="text-2xl ml-3 font-bold">work orders</h2>
+            <div class="flex items-center text-xl space-x-2 mt-2">
+               <button class="text-slate-500 text-sm"><i class="fa fa-table-columns"></i></button> 
+               <button class="bg-blue-200 text-blue-400 px-2 py-1 rounded-lg text-sm"><i class="fa fa-table-columns"></i></button> 
+               <button class="text-slate-500 text-sm"><i class="fa fa-table-columns"></i></button> 
+              
+            </div>
+        </div>
+        <div class="search-box flex items-center border border-gray py-[4px] rounded-md mr-3 pr-20">
+            <button class="px-2 text-slate-400 text-sm"><i class="fa-sharp fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" placeholder="search work orders" class="placeholder-gray-400 focus:outline-none text-black text-sm">
+        </div>
+    </div>
+
+     <!-- ...........menubar select section................. -->
+
+        <div class="flex items-center ml-3 mt-6 mb-7 space-x-[0.4rem]">
+            <div class="flex items-center border border-gray py-1 px-2 space-x-1 rounded-[0.2rem]">
+                <button class="text-sm text-blue-400"><i class="fa fa-filter"></i></button>
+                <h2 class="text-[14px] font-semibold text-gray-500">Filter</h2>
+            </div>
+            <div class="flex items-center border border-gray py-1 px-2 space-x-1 rounded-[0.2rem]">
+                <button class="text-sm text-blue-400"><i class="fa fa-user-large"></i></button>
+                <h2 class="text-[14px] font-semibold text-gray-500">Assign To</h2>
+            </div>
+            <div class="flex items-center border border-gray py-1 px-2 space-x-1 rounded-[0.2rem]">
+                <button class="text-sm text-blue-400"><i class="fa fa-clock"></i></button>
+                <h2 class="text-[14px] font-semibold text-gray-500">Due Date</h2>
+            </div>
+            <div class="flex items-center border border-gray py-1 px-2 space-x-1 rounded-[0.2rem]">
+                <button class="text-sm text-blue-400"><i class="fa fa-location-dot"></i></button>
+                <h2 class="text-[14px] font-semibold text-gray-500">Location</h2>
+            </div>
+            <div class="flex items-center border border-gray py-1 px-2 space-x-1 rounded-[0.2rem]">
+                <button class="text-sm text-blue-400"><i class="fa fa-comment"></i></button>
+                <h2 class="text-[14px] font-semibold text-gray-500">Priority</h2>
+            </div>
+            <div class="flex items-center border border-gray py-1 px-2 space-x-1 rounded-[0.2rem]">
+                <button class="text-sm text-blue-400"><i class="fa fa-circle-check"></i></button>
+                <h2 class="text-[14px] font-semibold text-gray-500">Status</h2>
+            </div>
+        </div>
+
+        <!-- ...........table section................. -->
+
+        <div class="mx-3">
+                
+    <div class="table w-full">
+    <table class="w-full border">
+
+         <!-- ...........table head................. -->
+        <thead>
+
+            <tr class="bg-gray-50 border-b">
+                <th class=" p-2 cursor-pointer text-sm font-thin text-gray-500">
+                   
+                <div class="flex items-center justify-center space-x-1">
+                    <input class="text-sm" type="checkbox">
+                    <h2>title</h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                    </svg>
+                </div>
+            </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h2 class="text-[14px] font-semibold">ID</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                       <h class="font-semibold text-[14px]"> Status</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]"> Priority</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]"> Priority</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]"> Assign To</h>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]"> Categories</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]">Equipment</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]">Location</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]">Created By</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]">Created on</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]">Updated on</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]">Due Date</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]">Time Schedule</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+                <th class="p-2 cursor-pointer text-sm font-thin text-gray-500">
+                    <div class="flex items-center justify-center">
+                        <h class="font-semibold text-[14px]">Attached procedure</h>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                        </svg>
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+               <!-- ...........table data with 1st row................. -->
+           
+            <tr class="bg-gray-100 text-center border-b text-sm text-gray-600 ">
+                <td class="p-2 ">
+                  <button class="text-[10px] text-gray-400 px-[5px] rounded-full bg-blue-200"><i class="fa fa-circle-check"></i></button>
+                </td>
+                <td class="p-2 border-r text-[11px]">Generator Maintenance</td>
+                <td class="p-2  text-[11px]">#3</td>
+                <td class="p-2 pt-5 text-[11px] flex items-center justify-center h-full space-x-1">
+                    <button class="text-blue-400 "><i class="fa-solid fa-lock"></i></button>
+                    <h2>Open</h2>
+                </td>
+                <td class="p-2  text-[11px] ">
+                   <div class="flex items-center space-x-1 justify-center">
+                    <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                    <h2>High</h2>
+                   </div>
+                </td>
+                <td class="p-2  text-[11px]">Kadir kasapor</td>
+                <td class="p-2  text-[11px] text-blue-600 font-semibold">security</td>
+                <td class="p-2  text-[11px]">-</td>
+                <td class="p-2  text-[11px]">General</td>
+                <td class="p-2  text-[11px]">kadir Kasapor</td>
+                <td class="p-2  text-[11px]">02/19/2023</td>
+                <td class="p-2  text-[11px]">02/19/2023</td>
+                <td class="p-2  text-[11px]">Morning</td>
+                <td class="p-2  text-[11px]">
+                    <h2 class=" bg-blue-500 text-white w-[55%] mx-auto rounded-md">Yearly</h2>
+                </td>
+                <td class="p-2  text-[11px]">Checklist</td>
+            </tr>
+
+             <!-- ...........table data with 2nd row................. -->
+             <tr class="bg-gray-100 text-center border-b text-sm text-gray-600 ">
+                <td class="p-2 ">
+                  <button class="text-[10px] text-gray-400 px-[5px] rounded-full bg-blue-200"><i class="fa fa-circle-check"></i></button>
+                </td>
+                <td class="p-2 border-r text-[11px]">Climate swap</td>
+                <td class="p-2  text-[11px]">#3</td>
+                <td class="p-2 pt-5 text-[11px] flex items-center justify-center h-full space-x-1">
+                    <button class="text-blue-400 "><i class="fa-solid fa-lock"></i></button>
+                    <h2>Open</h2>
+                </td>
+                <td class="p-2  text-[11px] ">
+                   <div class="flex items-center space-x-1 justify-center">
+                    <div class="w-2 h-2 bg-orange-400 rounded-full"></div>
+                    <h2>medium</h2>
+                   </div>
+                </td>
+                <td class="p-2  text-[11px]">Kadir kasapor</td>
+                <td class="p-2  text-[11px] text-blue-600 font-semibold">security</td>
+                <td class="p-2  text-[11px]">-</td>
+                <td class="p-2  text-[11px]">General</td>
+                <td class="p-2  text-[11px]">kadir Kasapor</td>
+                <td class="p-2  text-[11px]">02/19/2023</td>
+                <td class="p-2  text-[11px]">02/19/2023</td>
+                <td class="p-2  text-[11px]">Morning</td>
+                <td class="p-2  text-[11px]">
+                    <h2 class=" bg-blue-500 text-white w-[55%] mx-auto rounded-md">Yearly</h2>
+                </td>
+                <td class="p-2  text-[11px]">Checklist</td>
+            </tr>
+
+             <!-- ...........table data with 3rd row................. -->
+             <tr class="bg-gray-100 text-center border-b text-sm text-gray-600 ">
+                <td class="p-2 ">
+                  <button class="text-[10px] text-gray-400 px-[5px] rounded-full bg-blue-200"><i class="fa fa-circle-check"></i></button>
+                </td>
+                <td class="p-2 border-r text-[11px]">File alerm inspection</td>
+                <td class="p-2  text-[11px]">#3</td>
+                <td class="p-2 pt-5 text-[11px] flex items-center justify-center h-full space-x-1">
+                    <button class="text-blue-400 "><i class="fa-solid fa-lock"></i></button>
+                    <h2>Open</h2>
+                </td>
+                <td class="p-2  text-[11px] ">
+                   <div class="flex items-center space-x-1 justify-center">
+                    <div class="w-2 h-2 bg-red-600 rounded-full"></div>
+                    <h2>High</h2>
+                   </div>
+                </td>
+                <td class="p-2  text-[11px]">Kadir kasapor</td>
+                <td class="p-2  text-[11px] text-blue-600 font-semibold">security</td>
+                <td class="p-2  text-[11px]">-</td>
+                <td class="p-2  text-[11px]">General</td>
+                <td class="p-2  text-[11px]">kadir Kasapor</td>
+                <td class="p-2  text-[11px]">02/19/2023</td>
+                <td class="p-2  text-[11px]">02/19/2023</td>
+                <td class="p-2  text-[11px]">Morning</td>
+                <td class="p-2  text-[11px]">
+                    <h2 class=" bg-blue-500 text-white w-[55%] mx-auto rounded-md">Yearly</h2>
+                </td>
+                <td class="p-2  text-[11px]">Checklist</td>
+            </tr>
+          
+        </tbody>
+    </table>
+</div>
+        </div>
+  </section>
+
+
+
+  <!-- .........................modal section section..................................-->
+   
+
+  <div class="flex justify-center mt-20">
+    <a href="/modal.html" target="_blank" class="text-xl text-white px-3 py-2 bg-blue-500">View Modal</a>
+  </div>
+
+
+
+</body>
+</html>
